@@ -4,5 +4,6 @@ Complete the function below so that it returns True if
 the input word is a palindrome, False otherwise.
 """
 
+
 def exercise_2(word: str) -> bool:
     return word == word[::-1]
