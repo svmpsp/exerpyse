@@ -3,7 +3,7 @@ import json
 import logging
 
 from .console import ConsolePrinter
-
+from .file_manager import FileManager
 
 def parse_cli_args():
     parser = argparse.ArgumentParser(
@@ -26,15 +26,6 @@ def configure_logging(config: dict):
         logging.basicConfig(level=logging.WARN, format=log_format, datefmt=date_fmt)
 
 
-def run_setup(config: dict, console: ConsolePrinter):
-    console.print_setup()
-    pass
-
-
-def check_setup():
-    return False
-
-
 def run():
     config = parse_cli_args()
     configure_logging(config)
@@ -44,8 +35,8 @@ def run():
     console = ConsolePrinter()
     console.print_greeting()
 
-    if not check_setup():
-        run_setup(config, console)
+    file_manager = FileManager(console)
+    file_manager.setup_exercises()
 
 
 if __name__ == "__main__":
