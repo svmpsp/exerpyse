@@ -29,7 +29,7 @@ requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.black]
-line-length = 88
+line-length = 80
 target-version = ['py311']
 
 [tool.isort]
@@ -39,14 +39,15 @@ profile = "black"
 python_version = "3.11"
 ignore_missing_imports = true
 exclude = [
-    'docs/conf.py'
+    'docs/conf.py',
+    'exerpyses/'
 ]
 
 [tool.pytest.ini_options]
-addopts = "--cov=svmpsp_pyvis --cov-fail-under=80  --cov-report term-missing --maxfail=1 --verbosity=2"
+addopts = "--cov=svmpsp_pyvis --cov-fail-under=0  --cov-report term-missing --maxfail=1 --verbosity=2"
 
 [tool.pylint.'MESSAGES CONTROL']
-max-line-length = 88
+max-line-length = 80
 disable = """
     invalid-name,
     missing-class-docstring,

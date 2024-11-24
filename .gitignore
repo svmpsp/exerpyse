@@ -1,6 +1,8 @@
 .arkana/
 .arkana_build_cache/
+.coverage
 .mypy_cache/
 .venv/
 __pycache__
+dist/
 exerpyses

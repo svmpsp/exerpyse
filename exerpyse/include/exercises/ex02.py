@@ -8,4 +8,4 @@ the input word is a palindrome, False otherwise.
 def exercise_2(word: str) -> bool:
     # Add your code here
 
-    return ...
+    return False
