@@ -44,7 +44,7 @@ exclude = [
 ]
 
 [tool.pytest.ini_options]
-addopts = "--cov=svmpsp_pyvis --cov-fail-under=0  --cov-report term-missing --maxfail=1 --verbosity=2"
+addopts = "--cov=exerpyse --cov-fail-under=0  --cov-report term-missing --maxfail=1 --verbosity=2"
 
 [tool.pylint.'MESSAGES CONTROL']
 max-line-length = 80

@@ -17,6 +17,7 @@ class FileManager:
                 self._exercise_folder / ex_path.name
                 for ex_path in self._source_folder.glob("./*.py")
             ]
+            + [self._exercise_folder / "__init__.py"]
         )
 
     def clear_exercises(self):
@@ -32,3 +33,5 @@ class FileManager:
             dest = self._exercise_folder / filepath.name
             if not dest.exists():
                 shutil.copy2(filepath, dest)
+
+        (self._exercise_folder / "__init__.py").touch()
