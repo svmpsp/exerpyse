@@ -5,7 +5,7 @@ the sum of its parameters.
 """
 
 
-def exercise_1(param_1: int, param_2: int) -> int:
+def do_things(param_1: int, param_2: int) -> int:
     # Add your code here
 
     return 42

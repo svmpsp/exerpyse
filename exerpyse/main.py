@@ -4,6 +4,7 @@ import logging
 
 from .console import ConsolePrinter
 from .file_manager import FileManager
+from .runner import ExerpyseRunner
 
 
 def parse_cli_args():
@@ -37,10 +38,15 @@ def configure_logging(config: dict):
 def run_start(config: dict):
     console = config["console"]
     file_manager = config["file_manager"]
+    runner = config["runner"]
 
     console.print_greeting()
 
     file_manager.setup_exercises()
+    completed = runner.run()
+    if completed:
+        console.print_end()
+
 
 
 def run_reset(config: dict):
@@ -66,8 +72,11 @@ def run():
     configure_logging(config)
     logging.debug("Config: %s", json.dumps(config, indent=2))
 
-    config["console"] = ConsolePrinter()
+    console = ConsolePrinter()
+
+    config["console"] = console
     config["file_manager"] = FileManager()
+    config["runner"] = ExerpyseRunner(console)
 
     _RUNNERS[config["subcommand"]](config)
 
