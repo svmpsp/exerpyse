@@ -48,7 +48,6 @@ def run_start(config: dict):
         console.print_end()
 
 
-
 def run_reset(config: dict):
     console = config["console"]
     file_manager = config["file_manager"]
