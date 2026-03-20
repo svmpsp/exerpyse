@@ -11,11 +11,12 @@ def test_sum(test_func):
         expected = a + b
         assert res == expected
     except AssertionError as err:
-        print(f"TEST FAILED for ex01.py!")
+        print("TEST FAILED for ex01.py!")
         print(
-            f"The sum of {a} and {b} should be {expected}. Instead, your code returned {res}.\n"
+            f"The sum of {a} and {b} should be {expected}. "
+            f"Instead, your code returned {res}.\n"
         )
-        raise ValueError(f"test sum failed") from err
+        raise ValueError("test sum failed") from err
 
 
 def test_commutative(test_func):
@@ -27,8 +28,9 @@ def test_commutative(test_func):
         expected = test_func(b, a)
         assert res == expected
     except AssertionError as err:
-        print(f"TEST FAILED for ex01.py!")
+        print("TEST FAILED for ex01.py!")
         print(
-            f"The sum of {a} and {b} should be {expected}. Instead, your code returned {res}.\n"
+            f"The sum of {a} and {b} should be {expected}. "
+            f"Instead, your code returned {res}.\n"
         )
-        raise ValueError(f"test sum failed") from err
+        raise ValueError("test sum failed") from err
