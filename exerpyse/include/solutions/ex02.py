@@ -5,5 +5,5 @@ the input word is a palindrome, False otherwise.
 """
 
 
-def exercise_2(word: str) -> bool:
+def do_things(word: str) -> bool:
     return word == word[::-1]
