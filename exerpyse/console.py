@@ -41,8 +41,13 @@ class ConsolePrinter:
     def print_end(self):
         print("🎉🎉🎉 CONGRATULATIONS!!! 🎉🎉🎉\n")
         print("You have successfully completed all of our exercises.")
-        print("This means you now know how to write simple programs in Python.\n")
-        print("If you are interested and want to learn more, check out these free online resources:")
+        print(
+            "This means you now know how to write simple programs in Python.\n"
+        )
+        print(
+            "If you are interested and want to learn more, "
+            "check out these free online resources:"
+        )
         print("* TBD.\n")
         print("That's all, and good luck to you on your Programming journey!\n")
         print("The Exerpyse Development Team 📚🐍")

@@ -10,6 +10,10 @@ def get_exerpyse_paths() -> list[Path]:
         [
             path
             for path in Path("./exerpyses").glob("./*.py")
-            if not "__init__.py" in str(path)
+            if "__init__.py" not in str(path)
         ]
     )
+
+
+def get_exerpyse_path_from_id(exercise_id: int) -> Path:
+    return Path(f"./exerpyses/ex{exercise_id:02d}.py")

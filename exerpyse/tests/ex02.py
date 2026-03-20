@@ -9,8 +9,9 @@ def test_palindrome(test_func):
         expected = True
         assert res == expected
     except AssertionError as err:
-        print(f"TEST FAILED for ex02.py!")
+        print("TEST FAILED for ex02.py!")
         print(
-            f"The string '{a}' is a palidrome. Instead, your code returned {res}.\n"
+            f"The string '{a}' is a palidrome. "
+            f"Instead, your code returned {res}.\n"
         )
-        raise ValueError(f"test sum failed") from err
+        raise ValueError("test sum failed") from err
